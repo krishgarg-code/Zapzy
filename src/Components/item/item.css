@@ -1,6 +1,9 @@
 .item{
     width: 350px;
 }
+.image-round{
+    border-radius: 30px;
+}
 .item p{
     margin: 6px 0px;
 }
@@ -8,6 +11,7 @@
     display: flex;
     gap: 20px;
 }
+
 .item-price-new{
     color: teal;
     font-weight: 600;

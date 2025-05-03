@@ -5,7 +5,7 @@ import Offers from '../Components/offers/Offers'
 import Newcollections from '../Components/Newcollections/Newcollections'
 import Newsletter from '../Components/Newsletter/Newsletter'
 
-export const Shop = () => {
+const Shop = () => {
   return (
     <div>
       <Hero />
@@ -16,3 +16,5 @@ export const Shop = () => {
     </div>
   )
 }
+
+export default Shop

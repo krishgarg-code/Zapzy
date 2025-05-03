@@ -3,9 +3,7 @@
     justify-content: space-between;
     padding: 16px;
     box-shadow: 0 1px 2px -3px rgba(0, 0, 0, 0.2);
-    /* border-radius: 30px;
-    height: 40px; */
-    /* margin-top: 20px; */
+    
 }
 
 .nav-logo {
@@ -60,10 +58,11 @@
     color: white;
     font-size: 16px;
     font-weight: 700;
-    outline: none;
-    border: 1px solid black;
+    /* outline: none; */
     border-radius: 75px;
     cursor: pointer;
+    padding-bottom: 30px;
+
 }
 
 .nav-login-cart button:active{

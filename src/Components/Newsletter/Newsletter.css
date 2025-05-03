@@ -68,6 +68,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     margin-right: -20px;
+    margin-top: -0px;
 }
 .newsletter button:hover{
     background-color: #057683;

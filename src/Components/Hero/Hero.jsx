@@ -4,6 +4,13 @@ import hero1 from '../assets/hero1.png'
 import arrow from '../assets/arrow.png'
 
 const Hero = () => {
+  const scrollToCollections = () => {
+    const element = document.getElementById('new-collections');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='hero'>
       <div className="hero-left">
@@ -13,7 +20,7 @@ const Hero = () => {
           <p>for you and your family.</p>
         </div>
         
-        <div className='hero-latest-btn'>
+        <div className='hero-latest-btn' onClick={scrollToCollections}>
           <div>Shop Now </div>
           {/* <img src={arrow} alt="arrow" /> */}
         </div>

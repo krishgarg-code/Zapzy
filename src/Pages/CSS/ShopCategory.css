@@ -18,8 +18,10 @@
 }
 .shopcategory-sort{
     padding:10px 20px ;
-    border-radius: 40px;
+    border-radius: 10px;
     border: 1px solid #e0e0e0;
+    position: relative;
+    cursor: pointer;
 }
 .shopcategory-indexsort p span{
     font-weight: 600;
@@ -63,4 +65,34 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.shopcategory-loadmore:hover{
+    background-color: rgb(18, 122, 122);
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.category-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.category-dropdown div {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-dropdown div:hover {
+    background-color: rgb(23, 95, 95);
+    color: white;
 }

@@ -1,16 +1,67 @@
-import React, { use } from 'react'
+import React, { useState, useContext } from 'react'
 import './ProductDisplay.css'
 import { ShopContext } from '../../Context/ShopContext';
-import { useContext } from 'react';
-// import star_icon from "../assets/star_icon.png" ; I
-// // import star_dull_icon from "../assets/star_dull_icon.png"
+import BackButton from '../BackButton/BackButton';
+import { useNavigate } from 'react-router-dom';
+import star_icon from '../assets/star_icon.png'
+import star_dull_icon from '../assets/star_dull_icon.png'
 
 
 const ProductDisplay = (props) => {
     const { product } = props;
-    const {addToCart} = useContext (ShopContext);
+    const { addToCart } = useContext(ShopContext);
+    const [selectedSize, setSelectedSize] = useState(null);
+    const [showNotification, setShowNotification] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleSizeSelect = (size) => {
+        setSelectedSize(size);
+    };
+
+    const handleAddToCart = () => {
+        if (!selectedSize) {
+            alert('Please select a size');
+            return;
+        }
+        addToCart(product.id);
+        setShowNotification(true);
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 3000);
+    };
+
+    const handleBuyNow = () => {
+        if (!selectedSize) {
+            alert('Please select a size');
+            return;
+        }
+        addToCart(product.id);
+        navigate('/cart');
+    };
+
     return (
         <div className='productdisplay'>
+            <div className="back-button-container">
+                <BackButton />
+            </div>
+            {showNotification && (
+                <div className="cart-notification">
+                    <div className="notification-content">
+                        <div className="confetti-container">
+                            <div className="confetti"></div>
+                            <div className="confetti"></div>
+                            <div className="confetti"></div>
+                            <div className="confetti"></div>
+                            <div className="confetti"></div>
+                        </div>
+                        <div className="notification-text">
+                            <span className="checkmark">✓</span>
+                            <h2>Product Added to Cart!</h2>
+                        </div>
+                    </div>
+                </div>
+            )}
             <div className='productdisplay-left'>
                 <div className='productdisplay-img-list'>
                     <img src={product.image} alt="" />
@@ -25,7 +76,11 @@ const ProductDisplay = (props) => {
             <div className='productdisplay-right'>
                 <h1>{product.name}</h1>
                 <div className='productdisplay-right-star'>
-                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <img src={star_icon} alt="" />
+                    <img src={star_icon} alt="" />
+                    <img src={star_icon} alt="" />
+                    <img src={star_icon} alt="" />
+                    <img src={star_dull_icon} alt="" />
                     <p>122</p>
                 </div>
                 <div className='productdisplay-right-price'>
@@ -38,16 +93,23 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-right-size">
                     <h1>Select size</h1>
                     <div className="productdisplay-right-sizes">
-                        <div className="productdisplay-right-size-option">S</div>
-                        <div className="productdisplay-right-size-option">M</div>
-                        <div className="productdisplay-right-size-option">L</div>
-                        <div className="productdisplay-right-size-option">XL</div>  
-                        <div className="productdisplay-right-size-option">XLL</div>  
+                        {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
+                            <div 
+                                key={size}
+                                className={`productdisplay-right-size-option ${selectedSize === size ? 'selected' : ''}`}
+                                onClick={() => handleSizeSelect(size)}
+                            >
+                                {size}
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <button onClick={()=>{addToCart(product.id)}} >ADD TO CART</button>
-                <p className='productdisplay-right-category'><span>Category :</span> define the category  </p>
-                <p className='productdisplay-right-category'><span>Tags :</span> define the tags</p>
+                <div className="productdisplay-right-buttons">
+                    <button onClick={handleAddToCart}>ADD TO CART</button>
+                    <button onClick={handleBuyNow} className="buy-now-button">BUY NOW</button>
+                </div>
+                <p className='productdisplay-right-category'><span>Category :</span> {product.category} </p>
+                <p className='productdisplay-right-category'><span>Tags :</span> Modern, Latest</p>
             </div>
         </div>
     )

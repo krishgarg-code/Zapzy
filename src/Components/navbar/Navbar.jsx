@@ -5,16 +5,18 @@ import logo1 from '../assets/logo1.png';
 import cart_icon from '../assets/cart_icon.png';
 import { ShopContext } from '../../Context/ShopContext';
 import { useContext } from 'react';
+import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/clerk-react';
+import { SignOutButton } from '@clerk/clerk-react';
 
 const Navbar = () => {
     const [menu, setMenu] = useState('store');
-    const {getTotalCartItems}= useContext(ShopContext);
+    const { getTotalCartItems } = useContext(ShopContext);
 
     return (
         <div className='navbar'>
             <div className='nav-logo'>
                 <img src={logo1} alt="logo" />
-                <p>Shopper</p>
+                <p>Zapzy</p>
             </div>
 
             <ul className='nav-menu'>
@@ -25,10 +27,21 @@ const Navbar = () => {
             </ul>
 
             <div className='nav-login-cart'>
-                <Link to="/Login"><button>Login</button> </Link>
-                <Link to="/Cart"><img src={cart_icon} alt="cart" /></Link>
-                <div className='nav-cart-count'>{getTotalCartItems()}</div>
+                <header>
+                    <SignedOut>
+                        <SignInButton className="sign-in-btn" />
+                        <SignUpButton className="sign-up-btn" />
+                    </SignedOut>
+                    <SignedIn >
+                       <div className="user-icon"> <UserButton  /></div>
+                    </SignedIn>
+                </header>
+              
+                <Link to="/Cart"><img className='cart-icon' src={cart_icon} alt="cart" /></Link>
+                        <div className='nav-cart-count'>{getTotalCartItems()}</div>
+                        
             </div>
+
         </div>
     );
 };

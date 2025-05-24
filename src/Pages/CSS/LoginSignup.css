@@ -1,48 +1,52 @@
 .login-page {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    min-height: 80vh;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.login-container {
     background: white;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    margin: 40px auto;
-    max-width: 1000px;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .login-left {
-    flex: 1;
-    background-color: #e0f2f1;
-    padding: 40px;
-    border-radius: 16px;
-    margin-right: 20px;
-  }
-  
-  .login-left h1 {
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-container h1 {
     color: #00695c;
     margin-bottom: 24px;
     font-size: 28px;
-  }
-  
-  .loginsignup-fields input {
+    text-align: center;
+}
+
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.login-fields input {
     width: 100%;
     padding: 12px 15px;
-    margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #b2dfdb;
     background-color: #ffffff;
     outline: none;
     font-size: 15px;
-  }
-  
-  .loginsignup-fields input:focus {
+    transition: all 0.3s ease;
+}
+
+.login-fields input:focus {
     border-color: #009688;
     box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
-  }
-  
-  button {
+}
+
+.login-container button {
     width: 100%;
     background: #009688;
     color: white;
@@ -52,46 +56,58 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  button:hover {
+    transition: all 0.3s ease;
+}
+
+.login-container button:hover {
     background: #00796b;
-  }
-  
-  .loginsignup-login {
+}
+
+.login-login {
     text-align: center;
     margin-top: 20px;
     color: #004d40;
-  }
-  
-  .loginsignup-login span {
+}
+
+.login-login a {
     color: #00796b;
     font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .loginsignup-agree {
+    text-decoration: none;
+}
+
+.login-login a:hover {
+    text-decoration: underline;
+}
+
+.login-agree {
     display: flex;
     align-items: flex-start;
     margin-top: 20px;
     gap: 10px;
-  }
-  
-  .loginsignup-agree p {
+}
+
+.login-agree input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.login-agree p {
     font-size: 14px;
     color: #666;
-  }
-  
-  .login-right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-right img {
-    width: 100%;
-    max-width: 400px;
-    object-fit: contain;
-  }
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+    
+    .login-container h1 {
+        font-size: 24px;
+    }
+    
+    .login-fields input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
   

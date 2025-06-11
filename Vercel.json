@@ -1,0 +1,48 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/" },
+    { "source": "/signin", "destination": "/" },
+    { "source": "/signup", "destination": "/" },
+    { "source": "/shop", "destination": "/" },
+    { "source": "/shop/men", "destination": "/" },
+    { "source": "/shop/women", "destination": "/" },
+    { "source": "/shop/kids", "destination": "/" },
+    { "source": "/product/:id", "destination": "/" },
+    { "source": "/cart", "destination": "/" },
+    { "source": "/checkout", "destination": "/" },
+    { "source": "/orders", "destination": "/" },
+    { "source": "/profile", "destination": "/" },
+    { "source": "/wishlist", "destination": "/" },
+    { "source": "/about", "destination": "/" },
+    { "source": "/contact", "destination": "/" },
+    { "source": "/terms", "destination": "/" },
+    { "source": "/privacy", "destination": "/" },
+    { "source": "/faq", "destination": "/" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Clerk-Frontend-Api",
+          "value": "https://direct-collie-63.clerk.accounts.dev"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,7 @@ const Footer = () => {
         <div className='footer'>
             <div className="footer-logo">
                 <Link to='/'><img src={logo1} alt="" /></Link>
-                <p>Zapzy</p>
+                <p>Zayora</p>
             </div>
             <ul className="footer-links">
                 <li onClick={handleLinkClick}>Company</li>
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className="footer-copyright">
                 <hr />
-                <p>© 2025 Zapzy. All rights reserved.</p>
+                <p>© 2025 Zayora. All rights reserved.</p>
             </div>
 
             {showPopup && (

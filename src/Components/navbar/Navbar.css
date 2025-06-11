@@ -29,6 +29,7 @@
     font-size: 18px;
     font-weight: 500;
 }
+
 .nav-menu li:hover {
     transform: scale(1.1);
 }
@@ -40,7 +41,12 @@
     justify-content: center;
     gap: 5px;
     transition: all 0.3s ease;
+}
 
+.nav-menu li a {
+  color: rgb(6, 59, 59);
+  font-weight: 700;
+  text-decoration: none;
 }
 .nav-menu hr{
     border: none;

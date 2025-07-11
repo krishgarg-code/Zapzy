@@ -35,6 +35,7 @@
     border-radius: 20px 20px 20px 20px;
 
 }
+<<<<<<< HEAD
 
 @media (max-width: 900px) {
   .popular h1 {
@@ -76,3 +77,5 @@
     border-radius: 12px;
   }
 }
+=======
+>>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b

@@ -8,7 +8,10 @@ import { useNavigate } from 'react-router-dom';
 export const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState("");
+=======
+>>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
   const navigate = useNavigate();
 
   const handleCategorySelect = (category) => {
@@ -34,13 +37,18 @@ export const ShopCategory = (props) => {
 
   return (
     <div className='Shop-category'>
+<<<<<<< HEAD
       <div className='shopcategory-banner-container'>
         <img className='shopcategory-banner' src={props.banner} alt="" />
       </div>
+=======
+      <img className='shopcategory-banner' src={props.banner} alt="" />
+>>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
       <div className="shopcategory-indexsort">
         <p>
           <span>Showing 1-12</span> out of 36 products
         </p>
+<<<<<<< HEAD
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <div className="shopcategory-sort" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             Sort by: <img src={dropdown_icon} alt="" />
@@ -61,10 +69,22 @@ export const ShopCategory = (props) => {
             />
             <span role="img" aria-label="search">🔍</span>
           </div>
+=======
+        <div className="shopcategory-sort" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+          Sort by: <img src={dropdown_icon} alt="" />
+          {isDropdownOpen && (
+            <div className="category-dropdown">
+              <div onClick={() => handleCategorySelect('Mens')}>Men</div>
+              <div onClick={() => handleCategorySelect('Womens')}>Women</div>
+              <div onClick={() => handleCategorySelect('Kids')}>Kids</div>
+            </div>
+          )}
+>>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
         </div>
       </div>
 
       <div className="shopcategory-products">
+<<<<<<< HEAD
         {all_product
           .filter(item => props.category === item.category)
           .filter(item => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -76,6 +96,23 @@ export const ShopCategory = (props) => {
               new_price={item.new_price}
               old_price={item.old_price} />
           ))}
+=======
+        {all_product.map((item, i) => {
+          if (props.category === item.category) {
+            return (
+              <Item key={i}
+                id={item.id}
+                name={item.name}
+                image={item.image}
+                new_price={item.new_price}
+                old_price={item.old_price} />
+            )
+          }
+          else {
+            return null
+          }
+        })}
+>>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
       </div>
       <div className="shopcategory-loadmore" onClick={handleExploreMore}>
         EXPLORE MORE

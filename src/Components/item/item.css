@@ -25,7 +25,6 @@
 .item:hover{
     transform: scale(1.05);
     transition: all 0.6s ease;
-<<<<<<< HEAD
 }
 @media (max-width: 900px) {
   .item {
@@ -50,6 +49,4 @@
   .image-round {
     border-radius: 16px;
   }
-=======
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
 }

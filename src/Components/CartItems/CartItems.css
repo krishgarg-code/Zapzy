@@ -131,7 +131,6 @@
 .cartitems-promocode-button:hover{
     background-color: rgb(50, 195, 195);
     color: rgb(0, 0, 0);
-<<<<<<< HEAD
 }
 
 @media (max-width: 900px) {
@@ -273,6 +272,4 @@
   .cartitems-promocode p {
     margin-top: 18px;
   }
-=======
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
 }

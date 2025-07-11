@@ -96,7 +96,6 @@
     margin: 0;
 }
 
-<<<<<<< HEAD
 @media (max-width: 900px) {
   .login-container {
     padding: 20px;
@@ -132,20 +131,5 @@
   .login-agree p {
     font-size: 10px;
   }
-=======
-@media (max-width: 600px) {
-    .login-container {
-        padding: 30px 20px;
-    }
-    
-    .login-container h1 {
-        font-size: 24px;
-    }
-    
-    .login-fields input {
-        padding: 10px 12px;
-        font-size: 14px;
-    }
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
 }
   

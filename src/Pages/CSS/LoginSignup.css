@@ -1,0 +1,135 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-container h1 {
+    color: #00695c;
+    margin-bottom: 24px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.login-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.login-fields input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #b2dfdb;
+    background-color: #ffffff;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.login-fields input:focus {
+    border-color: #009688;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.login-container button {
+    width: 100%;
+    background: #009688;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+    background: #00796b;
+}
+
+.login-login {
+    text-align: center;
+    margin-top: 20px;
+    color: #004d40;
+}
+
+.login-login a {
+    color: #00796b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-login a:hover {
+    text-decoration: underline;
+}
+
+.login-agree {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.login-agree input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.login-agree p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+  .login-container {
+    padding: 20px;
+    max-width: 350px;
+  }
+  .login-container h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 600px) {
+  .login-page {
+    padding: 4px;
+  }
+  .login-container {
+    padding: 10px 2px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .login-container h1 {
+    font-size: 16px;
+  }
+  .login-fields input {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .login-container button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .login-login, .login-login a {
+    font-size: 12px;
+  }
+  .login-agree p {
+    font-size: 10px;
+  }
+}
+  

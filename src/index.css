@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    font-family: Spectral;
+}
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+  img, button {
+    max-width: 100%;
+    height: auto;
+  }
+}

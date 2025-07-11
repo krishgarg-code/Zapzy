@@ -6,7 +6,6 @@ import ProductDisplay from '../Components/ProductDisplay/ProductDisplay.jsx'
 import DescriptionBox from '../Components/DescriptionBox/DescriptionBox.jsx'
 import RelatedProducts from '../Components/RelatedProducts/RelatedProducts.jsx'
 
-<<<<<<< HEAD
 function useIsMobile() {
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 600);
   React.useEffect(() => {
@@ -17,14 +16,13 @@ function useIsMobile() {
   return isMobile;
 }
 
-=======
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
 export const Product = () => {
-  const {all_product} = useContext(ShopContext)
-  const {productId} = useParams()
-  const product = all_product.find((e) => e.id === Number(productId))
-<<<<<<< HEAD
+  const { all_product } = useContext(ShopContext);
+  const { productId } = useParams();
+  const product = all_product.find((e) => e.id === Number(productId));
+
   const isMobile = useIsMobile();
+
   return (
     <div>
       {isMobile ? (
@@ -32,17 +30,12 @@ export const Product = () => {
       ) : (
         <Breadcrum product={product} />
       )}
-=======
-  return (
-    <div>
-      <Breadcrum product = {product}/>
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
-      <ProductDisplay product = {product}/>
-      <DescriptionBox/>
-      <RelatedProducts/>
 
+      <ProductDisplay product={product} />
+      <DescriptionBox />
+      <RelatedProducts />
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

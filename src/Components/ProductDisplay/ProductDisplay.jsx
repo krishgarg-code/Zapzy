@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useContext, useEffect } from 'react'
-=======
-import React, { useState, useContext } from 'react'
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
 import './ProductDisplay.css'
 import { ShopContext } from '../../Context/ShopContext';
 import BackButton from '../BackButton/BackButton';
@@ -10,8 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import star_icon from '../assets/star_icon.png'
 import star_dull_icon from '../assets/star_dull_icon.png'
 
-
-<<<<<<< HEAD
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
   useEffect(() => {
@@ -22,8 +16,6 @@ function useIsMobile() {
   return isMobile;
 }
 
-=======
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
 const ProductDisplay = (props) => {
     const { product } = props;
     const { addToCart } = useContext(ShopContext);
@@ -57,11 +49,8 @@ const ProductDisplay = (props) => {
         navigate('/cart');
     };
 
-<<<<<<< HEAD
     const isMobile = useIsMobile();
 
-=======
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
     return (
         <div className='productdisplay'>
             <div className="back-button-container">
@@ -84,7 +73,6 @@ const ProductDisplay = (props) => {
                     </div>
                 </div>
             )}
-<<<<<<< HEAD
             {isMobile ? (
                 <div className='productdisplay-left mobile-product-images'>
                     <div className='productdisplay-main-img'>
@@ -110,19 +98,6 @@ const ProductDisplay = (props) => {
                     </div>
                 </div>
             )}
-=======
-            <div className='productdisplay-left'>
-                <div className='productdisplay-img-list'>
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                </div>
-                <div className='productdisplay-main-img'>
-                    <img src={product.image} alt="" />
-                </div>
-            </div>
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
             <div className='productdisplay-right'>
                 <h1>{product.name}</h1>
                 <div className='productdisplay-right-star'>

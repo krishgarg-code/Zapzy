@@ -19,19 +19,13 @@ const Hero = () => {
           <p>Discover the best fashion and accessories</p> 
           <p>for you and your family.</p>
         </div>
-        
         <div className='hero-latest-btn' onClick={scrollToCollections}>
           <div>Shop Now </div>
           {/* <img src={arrow} alt="arrow" /> */}
         </div>
       </div>
-<<<<<<< HEAD
       <div className="hero-right hero-image-container">
         <img className="hero-image" src={hero1} alt="Hero" />
-=======
-      <div className="hero-right">
-        <img src={hero1} alt="Hero" />
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
       </div>
     </div>
   )

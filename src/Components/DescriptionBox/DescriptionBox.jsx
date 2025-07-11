@@ -6,11 +6,7 @@ const DescriptionBox = () => {
         <div className='descriptionbox'>
             <div className="descriptionbox-navigator">
                 <div className="descriptionbox-nav-box">Description</div>
-<<<<<<< HEAD
-                {/* <div className="descriptionbox-nav-box fade">Reviews (122)</div> */}
-=======
                 <div className="descriptionbox-nav-box fade">Reviews (122)</div>
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
             </div>
             <div className="descriptionbox-description">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet veritatis ipsum neque,

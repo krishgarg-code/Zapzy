@@ -100,7 +100,6 @@
     font-size: 16px;
     margin: 0;
 }
-<<<<<<< HEAD
 
 @media (max-width: 900px) {
   .footer {
@@ -157,7 +156,7 @@
   .footer-copyright hr {
     width: 100%;
     height: 1px;
+    margin-bottom: 10px;
   }
 }
-=======
->>>>>>> 483cf0bf660c1d9cc840cfb0dc4b5b6a9522050b
+
